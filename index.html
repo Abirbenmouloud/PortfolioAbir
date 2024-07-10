@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abir Portfolio - Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="resume.html" target="_blank">Resume</a>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h1>Welcome to Abir's Portfolio</h1>
+        <p>Hello! I'm Abir Ben Mouloud. I'm passionate about data science, exploring new technologies, and solving complex problems. I enjoy hiking, photography, and playing chess in my free time.</p>
+        
+        <div class="video-container">
+            <h2>Introduction Video</h2>
+            <input type="text" id="videoCode" placeholder="Enter code to watch video">
+            <button onclick="playVideo()">Play Video</button>
+            <div id="video" style="display: none;">
+                <video width="600" controls>
+                    <source src="video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+
+        <div class="contact-info">
+            <h2>Contact Me</h2>
+            <p>Email: <a href="mailto:abir.benmouloud@gmail.com">abir.benmouloud@gmail.com</a></p>
+            <p>Phone: <a href="tel:+3349958565">+33749958565</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Abir Ben Mouloud. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function playVideo() {
+            const code = document.getElementById('videoCode').value;
+            const validCode = 'your_secret_code';
+            if (code === validCode) {
+                document.getElementById('video').style.display = 'block';
+            } else {
+                alert('Invalid code. Please try again.');
+            }
+        }
+    </script>
+</body>
+</html>

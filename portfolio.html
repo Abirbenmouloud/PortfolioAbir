@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abir Portfolio - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="resume.html" target="_blank">Resume</a>
+        </nav>
+    </header>
+
+    <section id="portfolio" class="portfolio">
+        <h2>Portfolio</h2>
+        <div class="filter">
+            <label for="category">Filter by Category:</label>
+            <select id="category" onchange="filterProjects()">
+                <option value="all">All</option>
+                <option value="academic">Academic</option>
+                <option value="personal">Personal</option>
+            </select>
+        </div>
+
+        <!-- Sample Academic Project -->
+        <div class="project academic">
+            <h3>Academic Project 1</h3>
+            <p>Description of the academic project. Highlight key technologies used and skills acquired.</p>
+        </div>
+
+        <!-- Sample Personal Project -->
+        <div class="project personal">
+            <h3>Personal Project 1</h3>
+            <p>Description of the personal project. Mention the problem it solves or the goal it achieves.</p>
+        </div>
+
+        <!-- Add more projects as needed -->
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Abir Ben Mouloud. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function filterProjects() {
+            const category = document.getElementById('category').value;
+            const projects = document.querySelectorAll('.project');
+
+            projects.forEach(project => {
+                const projectType = project.classList.contains(category) || category === 'all';
+                project.style.display = projectType ? 'block' : 'none';
+            });
+        }
+    </script>
+</body>
+</html>
