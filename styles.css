@@ -1,0 +1,240 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff; /* Arrière-plan blanc */
+    color: #333;
+    overflow-x: hidden; /* Empêcher le défilement horizontal */
+}
+
+header {
+    background-color: #fff;
+    color: #333;
+    padding: 1em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.nav-name {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-right: 1em;
+}
+
+.nav-right {
+    display: flex;
+    gap: 2em;
+    margin-left: 64em;
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+.resume-button {
+    border: 2px solid #007BFF;
+    color: #007BFF;
+    border-radius: 5px;
+    padding: 0.5em 1em;
+}
+
+.resume-button:hover {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Ajouter un fond semi-transparent pour améliorer la lisibilité */
+    padding: 1em;
+    border-radius: 10px;
+}
+
+.hero-text h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+}
+
+.hero-text p {
+    font-size: 1.5em;
+}
+
+.hero-text button {
+    margin-top: 1em;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.hero-text button:hover {
+    background-color: #0056b3;
+}
+
+#content {
+    padding: 2em;
+    font-family: 'Playfair Display', serif; /* Style d'écriture similaire à celui de James Kle */
+    text-align: center;
+    margin: 2em auto;
+    max-width: 800px;
+}
+
+#content h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+#content h3 {
+    font-size: 1.5em;
+    margin-top: 1em;
+}
+
+#content p, #content ul {
+    font-size: 1.2em;
+    line-height: 1.6em;
+    text-align: left;
+    margin: 0 auto 1em;
+}
+
+#hobbies {
+    padding: 2em;
+    background-color: #fff;
+    margin: 2em auto;
+    max-width: 1200px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#hobbies h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+.hobby-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.hobby {
+    flex: 1 1 30%;
+    margin: 1em;
+    box-sizing: border-box; /* Assurer que les marges sont incluses dans la largeur totale */
+}
+
+.hobby img {
+    max-width: 100%;
+    height: auto; /* S'assurer que les images gardent leurs proportions */
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.hobby img:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+.contact-icons {
+    font-size: 1.5em;
+}
+
+.contact-icons a {
+    color: white;
+    margin: 0 0.5em;
+    text-decoration: none;
+}
+
+.contact-icons a:hover {
+    color: #007BFF;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

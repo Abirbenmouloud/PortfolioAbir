@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abir Portfolio - About</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="https://drive.google.com/file/d/1BJIYw3nXEJuSIRfu1L_p50XDSPyskqCm/view" target="_blank">Resume</a>
+        </nav>
+    </header>
+
+    <section id="about" class="about-me">
+        <h2>About Me</h2>
+        <p>Hello! My name is Abir Ben Mouloud, a unique blend of a number wizard and a data explorer...</p>
+
+        <div class="filter">
+            <button onclick="showSubSection('work-experience')">Work Experience</button>
+            <button onclick="showSubSection('competition')">Competition</button>
+            <button onclick="showSubSection('benevola')">Benevola</button>
+        </div>
+        
+        <div id="work-experience" class="sub-section" style="display: none;">
+            <h3>Work Experience</h3>
+            <p>Details about work experience.</p>
+        </div>
+        
+        <div id="competition" class="sub-section" style="display: none;">
+            <h3>Competition</h3>
+            <p>Details about competitions.</p>
+        </div>
+        
+        <div id="benevola" class="sub-section" style="display: none;">
+            <h3>Benevola</h3>
+            <p>Details about benevola.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Abir Ben Mouloud. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showSubSection(subSectionId) {
+            const subSections = document.querySelectorAll('.sub-section');
+            subSections.forEach(subSection => {
+                subSection.style.display = 'none';
+            });
+            document.getElementById(subSectionId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
+
