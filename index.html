@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abir Portfolio - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-left">
+                <span class="nav-name">B. Abir</span>
+            </div>
+            <div class="nav-right">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="https://drive.google.com/file/d/1BJIYw3nXEJuSIRfu1L_p50XDSPyskqCm/view" target="_blank" class="resume-button">Resume</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <img src="image/abir_barcelonne.jpg" alt="Data Scientist Image" class="hero-image">
+        <div class="hero-text">
+            <h1>Hello! My name is Abir Ben Mouloud</h1>
+            <p>A unique blend of a number wizard and a data explorer, currently in the final stretch at Polytech Nice Sophia and pursuing a master's degree in data science at the University of Côte d'Azur.</p>
+            <button onclick="showVideo()">Watch My Video</button>
+        </div>
+    </div>
+
+    <div id="content">
+        <h2>My Life Motto: "Constraints Drive Creativity"</h2>
+        <h3>Work</h3>
+        <p>I am currently leading Developer Experience at Twelve Labs. We are building foundation models for video understanding.</p>
+        <p>Previously, I have worked at the nexus of enterprise ML/AI and data infrastructure.</p>
+        <ul>
+            <li>Drove product-led and community-led growth at Superb AI by way of advocacy and partnerships.</li>
+            <li>Bridged the gap between Research and Production Machine Learning with Full-Stack Deep Learning.</li>
+            <li>Organized community events in the Bay Area via MLOps World.</li>
+        </ul>
+        <p>In my past lives, I have built Data Science solutions for startups in Los Angeles (Fin-Tech) and New York (Enterprise). I also used to freelance as a data science journalist - having written 200+ technical articles for various publications and startups (Tecton, Weights and Biases, Snorkel AI, Saturn Cloud, etc.).</p>
+        <h3>Education</h3>
+        <p>Before this, I completed my M.S. degree in Computer Science from the Rochester Institute of Technology - where my research lies at the intersection of Deep Learning and Recommendation Systems, along with cross-functional work on Meta-Learning.</p>
+        <p>I graduated with a Bachelor Degree in Communication and a minor in Computer Science from Denison University.</p>
+    </div>
+
+    <div id="hobbies">
+        <h2>My Hobbies</h2>
+        <div class="hobby-container">
+            <div class="hobby">
+                <img src="image/dessin.jpg" alt="Drawing">
+                <h3>Drawing</h3>
+                <p>I enjoy creating comic strips and tattoos. Click the image to view my drawing album.</p>
+            </div>
+            <div class="hobby">
+                <img src="image/projet-innovation.jpg" alt="Innovation Competition">
+                <h3>Participating in Innovation Competitions</h3>
+                <p>Click the image to view details of my projects and the awards I've won.</p>
+            </div>
+            <div class="hobby">
+                <img src="image/chat.jpg" alt="Cat Photography">
+                <h3>Photography of My Cats</h3>
+                <p>Click the image to view my photo album of cats.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2023 Abir Ben Mouloud. All rights reserved.</p>
+            <div class="contact-icons">
+                <a href="mailto:abir.benmouloud@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="tel:+330749958565"><i class="fas fa-phone"></i></a>
+                <a href="https://www.linkedin.com/in/abir-b-b84167257/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/Abirbenmouloud" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <input type="text" id="accessCode" placeholder="Enter Access Code">
+            <button onclick="checkAccessCode()">Submit</button>
+            <div id="videoContainer" style="display:none;">
+                <video width="100%" controls>
+                    <source src="path/to/your/video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showVideo() {
+            document.getElementById('videoModal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('videoModal').style.display = 'none';
+        }
+
+        function checkAccessCode() {
+            const accessCode = document.getElementById('accessCode').value;
+            const validCode = 'your-secret-code'; // Remplacez par votre code d'accès
+
+            if (accessCode === validCode) {
+                document.getElementById('videoContainer').style.display = 'block';
+            } else {
+                alert('Invalid access code');
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+
+
