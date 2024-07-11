@@ -35,7 +35,7 @@ header {
 .nav-right {
     display: flex;
     gap: 2em;
-    margin-left: 64em;
+    margin-left: 60em;
 }
 
 nav a {
