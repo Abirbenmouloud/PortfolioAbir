@@ -58,7 +58,7 @@
         <div class="hobby-container">
             <div class="hobby">
                 <a href="https://your-drawing-album-link.com" target="_blank">
-                    <img src="image/dessin.jpg" alt="Drawing">
+                    <img src="dessin.jpg" alt="Drawing">
                     <h3>Drawing</h3>
                     <p>I enjoy creating comic strips and tattoos. Click the image to view my drawing album.</p>
                 </a>
@@ -114,20 +114,18 @@
         </div>
     </footer>
 
+    <!-- Video Modal (Removed access code functionality) -->
     <div id="videoModal" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <input type="text" id="accessCode" placeholder="Enter Access Code">
-        <button onclick="checkAccessCode()">Submit</button>
-        <div id="videoContainer" style="display:none;">
-            <video width="100%" controls>
-                <source src="to my Portfolio (1) (1) (1).mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="videoContainer">
+                <video width="100%" controls>
+                    <source src="to my Portfolio (1) (1) (1).mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
         </div>
     </div>
-    </div>
-
 
     <script>
         function showVideo() {
@@ -142,21 +140,10 @@
            modal.style.top = (rect.top + scrollTop + button.offsetHeight) + 'px';
            modal.style.left = rect.left + 'px';
            modal.style.display = 'block';
-}
+        }
 
         function closeModal() {
            document.getElementById('videoModal').style.display = 'none';
-}
-
-        function checkAccessCode() {
-            const accessCode = document.getElementById('accessCode').value;
-            const validCode = 'Abir2024'; // Remplacez par votre code d'accès
-
-            if (accessCode === validCode) {
-                document.getElementById('videoContainer').style.display = 'block';
-            } else {
-                alert('Invalid access code');
-            }
         }
 
         function showInnovationProjectModal() {
@@ -169,6 +156,7 @@
     </script>
 </body>
 </html>
+
 
 
 
